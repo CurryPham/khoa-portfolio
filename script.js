@@ -108,6 +108,9 @@ document.addEventListener("DOMContentLoaded", function () {
       if (target) {
         e.preventDefault();
         window.scrollTo({ top: target.offsetTop - 60, behavior: "smooth" });
+        // Immediately update nav highlight
+        links.forEach((l) => l.classList.remove("active"));
+        link.classList.add("active");
       }
     });
   });
